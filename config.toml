@@ -19,7 +19,7 @@ disableKinds = ["page", "section", "taxonomy", "taxonomyTerm", "RSS", "sitemap",
   # change page's appearance
 
   # Site icons
-  favicon_ico = "icons/favicon.ico"
+  favicon_ico = "favicon.ico"
   favicon_ico_sizes = "16x16 32x32"
   appleicon = "apple.png"
 
@@ -31,12 +31,13 @@ disableKinds = ["page", "section", "taxonomy", "taxonomyTerm", "RSS", "sitemap",
   # Link custom assets relative to /static
   #custom_js  = [""]
   #custom_css = ["background.css", "icons.css"]
+  custom_css = ["background.css"]
 
   # Customization switches
   # Overwrite FontAwesome: see icons.css
   #custom_icons = true
   # Overwrite background: see background.css
-  #custom_background = true
+  custom_background = true
 
   # Personal data
   [params.personal]
@@ -47,7 +48,7 @@ disableKinds = ["page", "section", "taxonomy", "taxonomyTerm", "RSS", "sitemap",
     position = "Software. Data. Bioinformatics."
     #livesIn = "Uppsala, Sweden"
     scope = [
-        "Bioinformatician at the [SNP&SEQ Technology Platform](https://www.sequencing.se)",
+        "Bioinformatician at the [SNP&SEQ Technology Platform](http://www.sequencing.se)",
         "PhD student in [Molecular Medicine at Uppsala University](https://www.medsci.uu.se/research/molmed/)",
         "Maintainer of the [Arteria](https://arteria-project.github.io) open source project",
         "Writer of the [Thoughts Blog](https://uppsala-bioinformatics.se/thoughts)",
