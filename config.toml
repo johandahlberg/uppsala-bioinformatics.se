@@ -1,95 +1,161 @@
 # Site settings
-baseURL = "https://uppsala-bioinformatics.se"
-languageCode = "en-US"
+baseurl = "https://uppsala-bioinformatics.se" #without ending slash
+languageCode = "en-us"
 title = "Johan Dahlberg"
-theme = "hugo-split-theme"
-disableKinds = ["page", "section", "taxonomy", "taxonomyTerm", "RSS", "sitemap", "robotsTXT"]
+theme = "hugo-identity-theme"
+themesDir = "themes"
+
+# Disable unnecessary kinds
+disableKinds = ["page", "section", "taxonomy", "taxonomyTerm", "RSS", "sitemap", "robotsTXT", "404"]
 
 # Enter your tracking code to enable Google Analytics
-googleAnalytics = ""
+#googleAnalytics = "UA-XXXXX-Y"
 
 [params]
 
-  # Metadata for search engines and social sharing
-  name = "Johan Dahlberg"
-  description = "Split is a centrally-divided layout for a professional online presence with a big image or video left with alongside content."
-  shareImage = "images/profile_johand_smaller.jpg"
-  twitterHandle = "genomicsdev"
+  # Images settings
+  # Icons, backgrounds and avatars folders are placed in theme's static/images folder.
+  # You may place your images in corresponding folders and then set only filenames below to
+  # change page's appearance
 
-  # Favicon
-  favicon = "images/favicon.ico"
+  # Site icons
+  favicon_ico = "icons/favicon.ico"
+  favicon_ico_sizes = "16x16 32x32"
+  appleicon = "apple.png"
 
-  # Copyright
-  copyright = "&copy;2017 Johan Dahlberg"
+  # Additional options to supplement icons served
+  #favicon_png = "favicon.png"
+  #favicon_png_sizes = "96x96"
+  #favicon_svg = "favicon.svg"
 
-  # Section - Content
-  [params.content]
+  # Link custom assets relative to /static
+  #custom_js  = [""]
+  #custom_css = ["background.css", "icons.css"]
+
+  # Customization switches
+  # Overwrite FontAwesome: see icons.css
+  #custom_icons = true
+  # Overwrite background: see background.css
+  #custom_background = true
+
+  # Personal data
+  [params.personal]
+    # If name is not set, author is used
     name = "Johan Dahlberg"
-    tagline = "Software. Data. Bioinformatics."
-    bio = "Johan Dahlberg is a creative problem solver, currently using software development and data science to tackle problems in genomics."
+    # Avatars can be written to images/avatars/
+    avatar = "profile_johand_smaller.jpg"
+    position = "Software. Data. Bioinformatics."
+    #livesIn = "Uppsala, Sweden"
+    scope = [
+        "Bioinformatician at the [SNP&SEQ Technology Platform](https://www.sequencing.se)",
+        "PhD student in [Molecular Medicine at Uppsala University](https://www.medsci.uu.se/research/molmed/)",
+        "Maintainer of the [Arteria](https://arteria-project.github.io) open source project",
+        "Writer of the [Thoughts Blog](https://uppsala-bioinformatics.se/thoughts)",
+      ]
+    biography = """Johan Dahlberg is a creative problem solver, currently using software development and data science to tackle problems in genomics."""
 
-  # Section - Visual
-  [params.visual]
+  # Contact form settings
 
-    # Image
-    [params.visual.image]
-      enable = true
-      file = "images/profile_johand_smaller.jpg"
-      position = "center center"
+  [params.contact]
+    # Since this template is static, the contact form uses www.formspree.io as a
+    # proxy. The form makes a POST request to their servers to send the actual
+    # email. Visitors can send up to a 1000 emails each month for free.
+    #
+    # What you need to do for the setup?
+    #
+    # - set your email address under 'email' below
+    # - upload the generated site to your server
+    # - send a dummy email yourself to confirm your account
+    # - click the confirm link in the email from www.formspree.io
+    # - you're done. Happy mailing!
 
-    # Video
-    [params.visual.video]
-      enable = false
-      mute = true
-      file = "videos/background.mp4"
-      # youtubeId = "dk9uNWPP7EA"
+    email = "your@email.com"
 
-  # Links
-  #
-  # Links List #1
-  [[params.links]]
-    [params.links.list1]
-      heading = "Connect"
+    # It is possible to substitute formspring with other providers
+    # as an example the mailout plugin from caddy.
+    # Provide the post URL for the form and depending on the provider
+    # add some custom JS script to finish the implementation.
 
-      [[params.links.list1.link]]
-        text = "Email"
-        url = "mailto:johan@uppsala-bioinformatics.se"
+    #postURL = "https://example.com/mailout/"
 
-      [[params.links.list1.link]]
-        text = "Twitter"
-        url = "https://twitter.com/genomicsdev"
+    enable = false
+    title = "Touch Me!"
+    namePlaceholder = "Name"
+    emailPlaceholder = "Email"
+    messagePlaceholder = "Message"
+    buttonText = "Send it"
+    success = "Thank you for contacting us."
+    error = "Message could not be send. Please contact us at "
 
-      [[params.links.list1.link]]
-        text = "LinkedIn"
-        url = "https://www.linkedin.com/in/johan-dahlberg"
+    # Google invisible captcha
+    #[params.contact.captcha]
+    #  sitekey = ""
 
-  # Links List #2
-  [[params.links]]
-    [params.links.list2]
-      heading = "Code"
 
-      [[params.links.list2.link]]
-        text = "Github"
-        url = "https://github.com/johandahlberg"
+    # Add optional form fields to identify contact forms.
+    #[[params.contact.fields.hidden]]
+    #  name = "someID"
+    #  value = "example.com"
 
-  # Links List #3
-  [[params.links]]
-    [params.links.list3]
-      heading = "Projects/Publications"
+    #[[params.contact.fields.hidden]]
+    # Special values for name such as "page" and "site" will be autofilled
+    #  name = "page"
 
-      [[params.links.list3.link]]
-        text = "Blog"
-        url = "https://uppsala-bioinformatics.se/thoughts/"
+  # Social settings
+  # You may change these with your social links or add others
 
-      [[params.links.list3.link]]
-        text = "Arteria"
-        url = "https://arteria-project.github.io/"
+  [[params.social]]
+    title = "Email"
+    icon = "fa-envelope"
+    link = "mailto:johan@uppsala-bioinformatics.se"
 
-      [[params.links.list3.link]]
-        text = "Google Scholar"
-        url = "https://scholar.google.se/citations?user=BHRLQaoAAAAJ&hl=en"
+  [[params.social]]
+    title = "Twitter"
+    icon = "fa-twitter"
+    link = "https://www.twitter.com/genomicsdev"
+    target = "_blank"
 
-  # The original template is released under the Creative Commons Attribution 3.0 License.
-  # Please keep the original attribution link when using for your own project.
-  # If you'd like to use the template without the attribution, you can check out
-  # the license option via the template author's website: https://onepagelove.com/split
+  [[params.social]]
+    title = "LinkedIn"
+    icon = "fa-linkedin"
+    link = "https://www.linkedin.com/in/johan-dahlberg"
+    target = "_blank"
+
+  [[params.social]]
+    title = "Github"
+    icon = "fa-github"
+    link = "https://github.com/johandahlberg"
+    target = "_blank"
+
+  [[params.social]]
+    title = "Google Scholar"
+    icon = "fa-book"
+    link = "https://scholar.google.se/citations?user=BHRLQaoAAAAJ&hl=en"
+    target = "_blank"
+  
+  # Footer settings
+  [params.footer]
+    # If copyright is not set, author is used
+    copyright = "Johan Dahlberg"
+
+  # Page license
+  [params.license]
+    link = "https://creativecommons.org/licenses/by-sa/4.0/legalcode"
+    name = "CC-BY-SA-4.0"
+
+  # Credits
+  [[params.credits]]
+    # Title is used as URL text
+    title = "HTML5UP"
+    # Text will be used to explain the credit
+    text = "Design by"
+    link = "https://html5up.net"
+
+  # Optional piwik tracking
+  #[params.analytics.piwik]
+  #  URL = "https://stats.example.com"
+  #  ID = "42"
+  #  # Track all subdomains with "*.example.com"
+  #  domain = "www.example.com"
+  #  # Optional integrity check hash
+  #  hash = "sha512-RfeD0pacGTqy9m7U6PgehQfS4cc7SIt+e+P+H5e848kEvB/RW84CUGO3O4O3LNbxjevym6KPUZ8muPsMrI8WIw=="
