@@ -48,8 +48,8 @@ disableKinds = ["page", "section", "taxonomy", "taxonomyTerm", "RSS", "sitemap",
     position = "Software. Data. Bioinformatics."
     #livesIn = "Uppsala, Sweden"
     scope = [
-        "Bioinformatician at the [SNP&SEQ Technology Platform](http://www.sequencing.se)",
-        "PhD student in [Molecular Medicine at Uppsala University](https://www.medsci.uu.se/research/molmed/)",
+        "Tech Lead at the [SNP&SEQ Technology Platform](http://www.sequencing.se)",
+        "PhD in [Molecular Medicine at Uppsala University](https://www.medsci.uu.se/research/molmed/)",
         "Maintainer of the [Arteria](https://arteria-project.github.io) open source project",
         "Writer of the [Thoughts Blog](https://uppsala-bioinformatics.se/thoughts)",
       ]
